@@ -1,0 +1,396 @@
+{
+  "schema": "eh.public.browser_use_comparison_excerpt.v1",
+  "prepared_on": "2026-09-07",
+  "run_date": "2026-07-14",
+  "source_batch": "rxt_sec_counterbalanced_20260714_v3",
+  "source_summary_sha256": "bb22b2075b667b5e275e813af57730c56283c205a45cc919402b3f166d30eb39",
+  "frozen_commit": "aa87ca0e35d8ff0d0d6b42a7e3fb2f4fefe02d0e",
+  "scope": "Historical fixed-task comparison. Quality-gate pass counts are not an independent field-by-field factual verification.",
+  "eh_configuration": {
+    "model": "DeepSeek V4 Pro",
+    "opencode_variant": "max",
+    "mode": "text",
+    "action_attempt_budget_per_session": 24,
+    "perceive_budget_per_session": 24,
+    "sessions": [
+      "Investing",
+      "SEC"
+    ]
+  },
+  "browser_use_configuration": {
+    "browser_use_version": "0.13.4",
+    "browser_use_core_version": "0.13.2",
+    "model": "deepseek-v4-pro",
+    "mode": "fair",
+    "max_steps": 24,
+    "max_actions_per_step": 5,
+    "timeout_s": 900.0,
+    "use_vision": false,
+    "use_judge": false,
+    "enable_planning": true,
+    "message_compaction": true,
+    "loop_detection": true,
+    "max_failures": 3,
+    "structured_transport": "json_object_with_authoritative_schema"
+  },
+  "browser_use_configurations_checked": 6,
+  "browser_use_configurations_identical": true,
+  "reasoning_configuration_equivalence": "not_confirmed",
+  "version_evidence": "Values written by the frozen adapter; not an independent package installation check.",
+  "pair_schedule": [
+    {
+      "pair": 1,
+      "first": "eh",
+      "second": "bu"
+    },
+    {
+      "pair": 2,
+      "first": "bu",
+      "second": "eh"
+    },
+    {
+      "pair": 3,
+      "first": "eh",
+      "second": "bu"
+    },
+    {
+      "pair": 4,
+      "first": "bu",
+      "second": "eh"
+    },
+    {
+      "pair": 5,
+      "first": "eh",
+      "second": "bu"
+    },
+    {
+      "pair": 6,
+      "first": "bu",
+      "second": "eh"
+    }
+  ],
+  "experience_enabled": false,
+  "planned_cooldown_seconds": 300,
+  "runs": [
+    {
+      "pair": 1,
+      "slot": 1,
+      "arm": "eh",
+      "wall_seconds": 549.041,
+      "calls": 31,
+      "reasoning_tokens": 15681,
+      "cost_usd": 0.064526,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "slot": 2,
+      "arm": "bu",
+      "wall_seconds": 459.691403,
+      "calls": 23,
+      "reasoning_tokens": 16095,
+      "cost_usd": 0.051276292,
+      "cost_exact": true,
+      "quality": {
+        "pass": false,
+        "missing": [
+          "filing_date",
+          "period_of_report",
+          "accepted",
+          "items",
+          "exhibit_99_1_description",
+          "exhibit_99_1_date"
+        ],
+        "checks": {
+          "completed": false,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": false,
+          "exhibit": false
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "slot": 1,
+      "arm": "bu",
+      "wall_seconds": 592.201584,
+      "calls": 24,
+      "reasoning_tokens": 23354,
+      "cost_usd": 0.080685511,
+      "cost_exact": true,
+      "quality": {
+        "pass": false,
+        "missing": [
+          "accepted"
+        ],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": false,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "slot": 2,
+      "arm": "eh",
+      "wall_seconds": 352.126,
+      "calls": 20,
+      "reasoning_tokens": 11593,
+      "cost_usd": 0.040133,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 3,
+      "slot": 1,
+      "arm": "eh",
+      "wall_seconds": 393.544,
+      "calls": 22,
+      "reasoning_tokens": 13008,
+      "cost_usd": 0.04842,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 3,
+      "slot": 2,
+      "arm": "bu",
+      "wall_seconds": 414.210576,
+      "calls": 21,
+      "reasoning_tokens": 12396,
+      "cost_usd": 0.051234387,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 4,
+      "slot": 1,
+      "arm": "bu",
+      "wall_seconds": 579.201844,
+      "calls": 24,
+      "reasoning_tokens": 21438,
+      "cost_usd": 0.0766006,
+      "cost_exact": true,
+      "quality": {
+        "pass": false,
+        "missing": [
+          "accepted"
+        ],
+        "checks": {
+          "completed": false,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": false,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 4,
+      "slot": 2,
+      "arm": "eh",
+      "wall_seconds": 437.473,
+      "calls": 26,
+      "reasoning_tokens": 12044,
+      "cost_usd": 0.048963,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 5,
+      "slot": 1,
+      "arm": "eh",
+      "wall_seconds": 389.986,
+      "calls": 22,
+      "reasoning_tokens": 11322,
+      "cost_usd": 0.042685,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    },
+    {
+      "pair": 5,
+      "slot": 2,
+      "arm": "bu",
+      "wall_seconds": 486.647696,
+      "calls": 24,
+      "reasoning_tokens": 18941,
+      "cost_usd": 0.069739809,
+      "cost_exact": true,
+      "quality": {
+        "pass": false,
+        "missing": [
+          "exhibit_99_1_description",
+          "exhibit_99_1_date"
+        ],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": false,
+          "exhibit": false
+        }
+      }
+    },
+    {
+      "pair": 6,
+      "slot": 1,
+      "arm": "bu",
+      "wall_seconds": 542.650623,
+      "calls": 24,
+      "reasoning_tokens": 23240,
+      "cost_usd": 0.076967566,
+      "cost_exact": true,
+      "quality": {
+        "pass": false,
+        "missing": [
+          "period_of_report",
+          "accepted",
+          "items",
+          "exhibit_99_1_description",
+          "exhibit_99_1_date"
+        ],
+        "checks": {
+          "completed": false,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": false,
+          "exhibit": false
+        }
+      }
+    },
+    {
+      "pair": 6,
+      "slot": 2,
+      "arm": "eh",
+      "wall_seconds": 359.494,
+      "calls": 17,
+      "reasoning_tokens": 12540,
+      "cost_usd": 0.037457,
+      "cost_exact": true,
+      "quality": {
+        "pass": true,
+        "missing": [],
+        "checks": {
+          "completed": true,
+          "company": true,
+          "ticker": true,
+          "cik": true,
+          "filing_date_shape": true,
+          "accepted_shape": true,
+          "items": true,
+          "exhibit": true
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "eh": {
+      "runs": 6,
+      "quality_gate_pass": 6,
+      "cost_usd": 0.282184
+    },
+    "bu": {
+      "runs": 6,
+      "quality_gate_pass": 1,
+      "cost_usd": 0.406504165
+    }
+  }
+}
